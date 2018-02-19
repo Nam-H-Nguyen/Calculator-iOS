@@ -13,7 +13,7 @@ Build Calculator stack view (advanced practice with autolayout)
 - - - -
 OR download the zip file
 - - - -
-4. Open the folder BitcoinTracker__
+4. Open the folder Calculator-iOS__
 5. Double click the file "Calculator-iOS.xcodeproj"
 6. Press two keys simultaneously __CMD + R__ to run the app
 
