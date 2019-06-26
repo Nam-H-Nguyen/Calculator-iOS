@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -30,7 +24,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJB-wb-7YD">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="107.66666666666667"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.141592653589" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSW-pN-58q">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSW-pN-58q">
                                                 <rect key="frame" x="10" y="0.0" width="374" height="107.66666666666667"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -58,6 +52,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="acBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYU-Ew-wXq"/>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kyc-79-PlQ"/>
                                                 </connections>
                                             </button>
@@ -65,22 +60,24 @@
                                                 <rect key="frame" x="101" y="0.0" width="91" height="107.66666666666667"/>
                                                 <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                                <state key="normal" title="+/-">
+                                                <state key="normal" title="(">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MbX-Lb-hRe"/>
+                                                    <action selector="leftParenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="otB-wT-94u"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSK-Ah-PFo">
                                                 <rect key="frame" x="202" y="0.0" width="91" height="107.66666666666667"/>
                                                 <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                                <state key="normal" title="%">
+                                                <state key="normal" title=")">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CXb-Vw-kcr"/>
+                                                    <action selector="rightParenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xoo-0B-z8y"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwj-nh-NXy">
@@ -92,6 +89,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QDm-KD-TeO"/>
+                                                    <action selector="divBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sdh-wd-9V6"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -108,6 +106,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="krq-KJ-pQb"/>
+                                                    <action selector="sevenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OrQ-Kj-fci"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9T-RV-XhB">
@@ -119,6 +118,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6oK-Fl-U98"/>
+                                                    <action selector="eightBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8x-2N-tKO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDq-2b-s4e">
@@ -130,6 +130,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pr7-C3-hR0"/>
+                                                    <action selector="nineBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NyC-qW-H3Z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHr-K4-phu">
@@ -141,6 +142,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bO6-uc-wpy"/>
+                                                    <action selector="multBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWH-44-snj"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -157,6 +159,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLp-Ov-XGq"/>
+                                                    <action selector="fourBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ScD-oR-q8j"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4X-M9-wCb">
@@ -168,6 +171,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nT-Em-v8f"/>
+                                                    <action selector="fiveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1I-te-pY1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xU8-7A-az7">
@@ -179,6 +183,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qxF-Lu-iXM"/>
+                                                    <action selector="sixBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QiU-31-vS1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-EN-kdQ">
@@ -190,6 +195,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3gJ-0w-g0j"/>
+                                                    <action selector="subBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mrq-fw-f85"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -206,6 +212,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pao-QM-L7H"/>
+                                                    <action selector="oneBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EOD-Mw-a6V"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rM-OY-D6e">
@@ -217,6 +224,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4C-17-kto"/>
+                                                    <action selector="twoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vke-fi-vSt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMf-X1-jk1">
@@ -228,6 +236,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOX-dL-2gf"/>
+                                                    <action selector="threeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOj-Dd-qwo"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV4-7W-FQu">
@@ -238,6 +247,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="addBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jgu-LW-4FY"/>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="djx-Re-vyq"/>
                                                 </connections>
                                             </button>
@@ -247,7 +257,7 @@
                                         <rect key="frame" x="0.0" y="588.33333333333337" width="394" height="107.66666666666663"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ai0-7K-tKY">
-                                                <rect key="frame" x="0.0" y="0.0" width="194" height="107.66666666666667"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="193.66666666666666" height="107.66666666666667"/>
                                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                 <state key="normal" title="0">
@@ -255,10 +265,11 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnd-vV-HE5"/>
+                                                    <action selector="zeroBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2lz-uh-Goq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4y-2X-iyF">
-                                                <rect key="frame" x="204" y="0.0" width="89.666666666666686" height="107.66666666666667"/>
+                                                <rect key="frame" x="203.66666666666666" y="0.0" width="90.333333333333343" height="107.66666666666667"/>
                                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                 <state key="normal" title=".">
@@ -266,10 +277,11 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tTv-Gu-OJv"/>
+                                                    <action selector="decBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aSB-kM-Eoe"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgi-xy-cvG">
-                                                <rect key="frame" x="303.66666666666669" y="0.0" width="90.333333333333314" height="107.66666666666667"/>
+                                                <rect key="frame" x="304" y="0.0" width="90" height="107.66666666666667"/>
                                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                 <state key="normal" title="=">
@@ -277,6 +289,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pXn-mo-BJy"/>
+                                                    <action selector="equalBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YKu-bI-Wie"/>
                                                 </connections>
                                             </button>
                                         </subviews>
